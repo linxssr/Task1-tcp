@@ -27,7 +27,7 @@ def recv_exact(sock, n):
 def main():
     #读取命令行参数,确保参数数量正确，否则打印用法提示并退出。
     if len(sys.argv) != 6:
-        print("Usage: client.py <server_ip> <server_port> <filename> <min_len> <max_len>")
+        print("Usage: reversetcpclient.py <server_ip> <server_port> <filename> <min_len> <max_len>")
         sys.exit(1)
 
     server_ip = sys.argv[1] # 读取ip

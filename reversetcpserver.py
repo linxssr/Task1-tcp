@@ -3,7 +3,7 @@ import struct       # 二进制数据打包/解包
 import threading    # 多线程处理每个客户端
 import sys          # 处理命令行参数
 
-# 精确读取n字节数据，TCP 是流式协议，recv() 可能读不满你要的字节，所以要循环读。
+# 精确读取n字节数据，TCP 是流式协议，recv() 可能读不满要的字节，所以要循环读。
 def recv_exact(sock, n):
     data = b''
     while len(data) < n:
@@ -62,7 +62,7 @@ def handle_client(conn):
 def main():
     #参数检查，从命令行获取端口号：例如：python server.py 8888
     if len(sys.argv) != 2:
-        print("Usage: server.py <port>")
+        print("Usage: reversetcpserver.py <port>")
         sys.exit(1)
 
     port = int(sys.argv[1]) # 端口号设置
